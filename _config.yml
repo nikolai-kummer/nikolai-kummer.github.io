@@ -61,6 +61,10 @@ author:
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/nikolai-kummer-5426a236/"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/c/NikolaiK/"
+    
       
 footer:
   links:
