@@ -1,0 +1,125 @@
+---
+title:  "DS1307 real-time clock on the MSP430 Launchpad with Energia"
+date:   2018-02-04 21:59:23 -0700
+categories: 
+ msp430
+ energia
+excerpt: Setup a MSP430 microcontrolelr with the Energia programming environment.
+header:
+ og_image: /images/msp430-rtc.png
+ teaser: /images/msp430-rtc.png
+---
+
+
+The following procedure will show you how to set up your launchpad with [Energia](http://energia.nu/) (an Arduino IDE-like programming environment) and should work for both the MSP-430F5529 and the MSP-430G2553.
+
+
+#### Where to Get Parts
+The parts in this tutorial can be acquired from the following vendors:
+* [M430G2553 Amazon Link](https://www.amazon.com/gp/product/B01NC2Y6BM)
+* [Adafruit RTC Breakout Kit Amazon Link](https://www.amazon.com/gp/product/B01MS40AOD)
+
+
+
+#### Hardware
+I will be using the [DS1307 chip + breakout board from Adafruit](https://www.adafruit.com/products/264).
+
+
+__Breakout-Board Assembly__
+
+The MSP430 systems operate on 3.3 Volt logic, and Arduino-based systems use 5V logic. The original Adafruit break-our board is made for 5 Volt logic, but can be modified to work with 3.3Volt logic, by omitting the 2.2kΩ pull-up resistors that come with the kit. Solder the pins, the DS1307 IC, the capacitor and the crystal.
+
+__Circuit__
+
+The F5529 board uses the P3.0 (SDA0) and P3.1 (SCL) pins for I2C communication. For more information, see the [F5529 board pinout here](https://energia.nu/pinmaps/msp-exp430f5529/).
+
+Connect the Launchpad and the RTC breakout board together.
+
+The RTC is powered by the 5 volt line. The SQW pin is not connected in this tutorial, but can be used to receive a square wave output at varying frequencies. The SDA and the SCA pins are connected through a 1.8 kΩ pull-up resistor each to the P3.0 and P3.1 pins, respectively.
+
+
+#### Software
+
+__Energia Installation__
+
+* Download the latest Energia version from [here](https://energia.nu/download/)(in my case I used the Windows Binary release).
+* Extract the .zip file into a working folder.
+
+__RTC Library Installation__
+
+
+* Download the [elpaso RTC Library from github](https://github.com/elpaso/rtclib). There are many others out there, but this one worked for me.
+* Extract the .zip file into the /Energia/libraries/RTCLib folder.
+- Restart Energia to make sure that the libraries are loaded. You can check if a library is set up, by clicking on Sketch->Import Library…->RTCLib, which will add the line #include <RTClib.h> to your sketch.
+
+
+__Sketch Creation__
+Copy and paste the following sketch into Energia. The code will show you the current time and a time 7 days and 30 seconds into the future to ensure that the math works.
+
+
+~~~ cs
+#include <Wire.h>
+#include <RTClib.h>
+
+RTC_DS1307 RTC;
+void setup () {
+Serial.begin(9600);
+Wire.begin();
+RTC.begin();
+
+// following line sets the RTC to the date & time this sketch was compiled
+//RTC.adjust(DateTime(__DATE__, __TIME__));
+
+}
+void loop () {
+DateTime now = RTC.now();
+Serial.print(now.year(), DEC);
+Serial.print('/');
+Serial.print(now.month(), DEC);
+Serial.print('/');
+Serial.print(now.day(), DEC);
+Serial.print(' ');
+Serial.print(now.hour(), DEC);
+Serial.print(':');
+Serial.print(now.minute(), DEC);
+Serial.print(':');
+Serial.print(now.second(), DEC);
+Serial.println();
+Serial.print(" since 2000 = ");
+Serial.print(now.get());
+Serial.print("s = ");
+Serial.print(now.get() / 86400L);
+Serial.println("d");
+// calculate a date which is 7 days and 30 seconds into the future
+DateTime future (now.get() + 7 * 86400L + 30);
+Serial.print(" now + 7d + 30s: ");
+Serial.print(future.year(), DEC);
+Serial.print('/');
+Serial.print(future.month(), DEC);
+Serial.print('/');
+Serial.print(future.day(), DEC);
+Serial.print(' ');
+Serial.print(future.hour(), DEC);
+Serial.print(':');
+Serial.print(future.minute(), DEC);
+Serial.print(':');
+Serial.print(future.second(), DEC);
+Serial.println();
+Serial.println();
+delay(3000);
+}
+~~~
+
+__Uploading Sketch__
+
+The first time you try to read data from the RTC (or after the battery has been removed for more than 3 seconds) you should see the date of 2000/01/01 and it will not change. This happens after evry reset. You must first set the date before it starts to work.
+
+The line RTC.adjust() is currently commented out. This line sets the time of the RTC to the current computer time, so make sure that the computer time is correct. Once you run the code, you will see the time change every 3 seconds.
+
+___Important: Make sure to comment out the RTC.adjust() line and uploading the sketch before removing power to the RTC. Otherwise, the time will be reset every time the RTC gets power to whatever time the code was generated___
+
+The Serial Monitor output can be accessed by pressing __[Ctrl]+[Shift]+[M]__ and should show something like this:
+
+
+__Conclusion__
+In this tutorial you were shown how to interface the DS1307 with the MSP430F5529 board.
