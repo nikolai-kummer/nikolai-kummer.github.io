@@ -11,7 +11,15 @@ header:
 ---
 
 
-Good data books are hard to find. Here is a list of recommendations for some great data books that I have enjoyed and found to be very thoughtful. I find these books a great way to entertain yourself, while at the same time learn something along the way:
+Good data books are hard to find. Here is a list of recommendations for some great data books that I have enjoyed and found to be very thoughtful. I am in no way a book critic and this is not where you get a detailed breakdown of each chapter. These books are entertaining to read and help you develop a better sense of how to think about our world filled with data:
+
+---
+ 
+ [The Data Detective: Ten Easy Rules to Make Sense of Statistics](https://www.amazon.ca/Data-Detective-Rules-Sense-Statistics/dp/0593084594)
+ 
+ ![The Data Detective](/images/data_book_data_detective.jpg){:height="100px" .align-right} 
+Tim Harford presents 10 ways in which one should approach a new piece of information that they received. For example we should focus on the actual numbers and facts, rather than how they make us feel. We are surrounded by information and facts that surprise or are contradictory to what we believe are more likely to grip our attention or get published. This book is as much about psychology as it is about numbers and will therefore be a good fit for a wide audience. It is full of entertaining anecdotes to help the reader digest and understand the presented concepts.
+
 
 ---
  
