@@ -27,7 +27,7 @@ Tim Harford presents 10 ways in which one should approach a new piece of informa
  [Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are](https://www.amazon.com/Everybody-Lies-Internet-About-Really/dp/0062390856/)
  
  ![Everybody Lies](/images/data_book_everybody_lies.jpg){:height="100px" .align-left} 
- This is a good book about a gentle introduction into the world of big data. Written by Seth Stephens-Davidowitz, a Harvard-trained economist and former Google data scientist he provides a layman-introduction about how to think about data. The author dives deep into how online behaviour can be used to make conclusions about larger populations. This is not a technical book, but an entertaing data read
+ This is a good book about a gentle introduction into the world of big data. Written by Seth Stephens-Davidowitz, a Harvard-trained economist and former Google data scientist he provides a layman-introduction about how to think about data. The author dives deep into how online behaviour can be used to make conclusions about larger populations by citing examples from Google history. This is not a technical book, but an entertaing data read and one that can be recommended for non-data literate folks.
 
  
 ---
@@ -41,7 +41,7 @@ This book is advertised as one of Bill Gates's "10 favourite books" and I did en
  [Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy](https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418831)
  
   ![Weapons of Math Destruction](/images/data_book_weapons_of_math.jpg){:height="100px" .align-left} 
-This book is really famous among data scientists and made Cathy O'Neill a household name. It presents numerous example how blind trust into models leads to an overall worse outcome for marginalized groups. I have often encountered blind faith into models in my career and this book reminds you to question the outcomes and the assumptions that went into the development. Examples from Cathy O'Neills book are often quoted when people discuss the ethical obligations of data scientists. 
+This book is really famous among data scientists and made Cathy O'Neill a household name. It presents numerous example how blind trust into models leads to an overall worse outcome for marginalized groups. I have often encountered blind faith into models in my career and this book reminds you to question the outcomes and the assumptions that went into the development. Examples from Cathy O'Neills book are often quoted when people discuss the ethical obligations of data scientists. This book is an absolute must-read for anyone who makes models that affect people.
 
  
  ---
