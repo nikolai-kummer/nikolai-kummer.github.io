@@ -5,7 +5,7 @@ categories:
  -keras 
  -machine vision
 classes: wide
-excerpt: Experiment around using keras to blur an image via manually assigned Gaussian kernels.
+excerpt: Experiments around using keras to blur an image via manually assigned Gaussian kernels and comparissons to OpenCV.
 header:
  og_image: /images/keras_exp_blur_random.jpg
  teaser: /images/keras_exp_blur_random.jpg
