@@ -4,6 +4,7 @@ date:   2022-02-10 20:11:00 -0700
 categories: 
  -data science 
  -podcasts
+classes: wide
 excerpt: A list of insightful podcasts in a sea of podcasts!
 header:
  og_image: /images/DoughDog.png
@@ -14,7 +15,7 @@ I started listening to data podcasts with Partially Derivative back in 2014. The
 
 ---
  
- [Towards Data Science Scary Smart: A former Google exec’s perspective on AI risk](https://towardsdatascience.com/scary-smart-a-former-google-execs-perspective-on-ai-risk-277bd89549a6)
+ [Towards Data Science Scary Smart: A former Google exec’s perspective on AI risk 2022-01-26](https://towardsdatascience.com/scary-smart-a-former-google-execs-perspective-on-ai-risk-277bd89549a6)
  
  ![Towards Data Science](/images/data_podcast_towards_data_science.jpg){:height="100px" .align-right} 
 The topic of AI safety is frequently covered and few interviews mention anything truly novel. This particular episode is different. Mo Gawdat (a former Chief Business Officer at Google \[X\]) shares his experiences of seeing rapid evolution in the AI landscape.  Many of us tend to think of our work as simple statistical models, but Mo makes a point that they are so much more given their ability to come up with strategies and inferences that they were not programmed for. We have also given the existing systems a lot of power over our behaviours and what news we see, which allows the internet to reshape our world view. Extrapolating into the future (and assuming a doubling rate of model development) we will end up with incredibly powerful systems that will dward human intelligence. At that point it will become very difficult to control the AI agents in any meaningful way.

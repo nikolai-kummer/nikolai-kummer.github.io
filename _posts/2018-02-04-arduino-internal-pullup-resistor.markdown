@@ -3,6 +3,7 @@ title:  "Internal Pullup Resistors on the Arduino for Digital and Analog Pins"
 date:   2018-02-04 20:59:23 -0700
 categories: 
  -arduino
+classes: wide
 excerpt: Set up an Arduino with internal pullup resistors via the AnalogRead() function.
 header:
  og_image: /images/arduino_top_view.png

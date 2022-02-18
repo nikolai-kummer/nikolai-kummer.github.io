@@ -4,6 +4,7 @@ date:   2018-07-22 20:59:23 -0700
 categories: 
  -data science 
  -books
+classes: wide
 excerpt: Good data books are hard to find, here are a handful that are great.
 header:
  og_image: /images/DoughDog.png

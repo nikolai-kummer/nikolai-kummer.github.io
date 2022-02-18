@@ -4,6 +4,7 @@ date:   2018-02-04 21:59:23 -0700
 categories: 
  msp430
  energia
+classes: wide
 excerpt: Setup a MSP430 microcontrolelr with the Energia programming environment.
 header:
  og_image: /images/msp430-rtc.png
