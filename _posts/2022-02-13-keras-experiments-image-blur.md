@@ -5,10 +5,10 @@ categories:
  -keras 
  -machine vision
 classes: wide
-excerpt: Use keras to blur an image via gaussian kernels.
+excerpt: Experiment around using keras to blur an image via manually assigned Gaussian kernels.
 header:
- og_image: /images/keras_exp_blur_random.png
- teaser: /images/keras_exp_blur_random.png
+ og_image: /images/keras_exp_blur_random.jpg
+ teaser: /images/keras_exp_blur_random.jpg
 ---
 
 Keras is a well-known tensorflow wrapper library used to make deep learning models. I have been using it extensively and have started machine vision-related experiments with it. I currently use opencv for image processing, but I started to wonder whether I can use the convolutional layer in keras/tensorflow to achieve the same results at similar/faster speed. Practically speaking there is no reason to use keras for this task but I decided to run a quick experimentation because I could.
