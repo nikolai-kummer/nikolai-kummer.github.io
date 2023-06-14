@@ -7,8 +7,8 @@ categories:
 classes: wide
 excerpt: How do you get your python code to run faster? Start with profiling and follow the following tips.
 header:
- og_image: /images/keras_exp_blur_random.jpg
- teaser: /images/keras_exp_blur_random.jpg
+ og_image: /images/optim00-optimizing-python.jpg
+ teaser: /images/optim00-optimizing-python.jpg
 ---
 
 ##  Why bother optimizing?
