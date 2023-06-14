@@ -11,7 +11,7 @@ header:
  teaser: /images/optim01-weighted-sampling.png
 ---
 
-##  Probem Statement
+##  Problem Statement
 I recently trained a reinforcement learning model and decided to profile the code prior to running a long-running parameter optimization search. One important aspect of the code was the random sampling of elements from a weighted distribution, which was consuming a considerable amount of runtime. Given that random sampling from a weighted distribution is a common task in machine learning and data science, finding a more efficient solution would allow me to optimize the code and get back to work faster. 
 
 Initially, I used `np.random.choice` as the sampling function. However, upon researching the topic, I came across a [StackOverflow question](https://stackoverflow.com/questions/18622781/why-is-numpy-random-choice-so-slow) that recommended using `random.choices` as an alternative. After profiling both functions, I found that random.choices was six times faster in my specific application. Both functions accept as inputs the array to sample from, the number of elements to return, and the weights of the values in the sample array.
