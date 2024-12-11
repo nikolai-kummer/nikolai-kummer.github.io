@@ -1,7 +1,7 @@
 ---
 title:  "Bootstrap Sampler"
 layout: single_with_math_latex
-date:   2024-12-11 14:48:00 -0700
+date:   2024-12-10 14:48:00 -0700
 categories: 
   datascience
 classes: wide
