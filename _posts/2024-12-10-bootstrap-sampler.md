@@ -5,7 +5,7 @@ date:   2024-12-10 14:48:00 -0700
 categories: 
   datascience
 classes: wide
-excerpt: Boostrap sampler widget
+excerpt: Compare and quantify the difference between two real-world samples using the bootstrap sampler
 header:
  og_image: /images/pca_main.jpg
  teaser: /images/pca_main.jpg
@@ -51,9 +51,9 @@ What if you have a process where a change occured and you want to know if any ch
 
 If you squint, you can see that the process seems to have shifted after the change. But how can you be sure? You might remember statistical tests, but what if the data is not normally distributed? Or if you have a small sample size? You cannot always rely on assumptions from parameteric equations when dealing with real-world data. 
 
-The bootstrap sampler is a resampling technique that allows the estimation of any statistic with confidence bounds without any requirements on the distribution of the data. The only assumption that it makes is that the sample that you have is representative of the population.
+The bootstrap sampler is a resampling technique that allows the estimation of any statistic with confidence bounds without any requirements on the distribution of the data. The only assumption that it makes is that the sample that you have is representative of the population. If the sample is biased or contains a weird outlier, then the results will be biased as well.
 
-### Boostrap Sampling
+### Bootstrap Sampling
 
 When you have a sample of data and calculate the mean for it, you are calculating a single number with no way of knowing how variable that number is. 
 
@@ -62,7 +62,7 @@ When you have a sample of data and calculate the mean for it, you are calculatin
 - Then you repeat this process say 10,000 times and calculate the mean each time
 - You now have a distribution of means that you can use to estimate the variability of the mean and a confidence interval around it.
 
-This sounds like it shouldn't work and that is why it was called the method was called bootstrap resampling because it was like pulling yourself up by your bootstraps (which is impossible). But it does work and it is a powerful tool in the data scientist's toolkit.
+This sounds like it shouldn't work and that is why it was called the method was called bootstrap resampling because it was like pulling yourself up by your bootstraps implying self-sufficiency. Pulling oneself up by your bootstraps is not physically possible, but the boostrap method has been shown to work and is a powerful tool in the data scientist's toolkit.
 
 ### Process Change Example
 
@@ -72,9 +72,9 @@ The values will vary a bit every time the process is run, but the results show t
 - Sample 2 (after the change) has a higher mean and median than Sample 1 (before the change)
 - The confidence intervals are overlapping, which means that it is hard to say which mean is higher with confidence
 
-We can go a step further though. What if we want to know if the change was significant? We can resample both samples 10,000 times and check which mean is higher in each resample. This will tell us how often the mean of Sample 2 is higher than the mean of Sample 1. This is called a permutation test and it is a powerful tool to determine if a change is significant.
+We can go a step further though. What if we want to know if the change was significant? We can resample both samples 10,000 times and check which mean is higher in each resample. This will tell us how often the mean of Sample 2 is higher than the mean of Sample 1. This will give us an idea of how significant the change potentially was.
 
-In this case the results show that the mean of Sample 1 is higher only about 5% of the time. This is a significant result and we can conclude that the change had an effect on the process and that the mean after the change (sample 2) is higher than the mean before the change (sample 1). The truth is the above data was sample from a process where the mean has only shifted by 1 units and the data is skewed so the median is a better measure of central tendency.
+In this case the results show that the mean of Sample 1 is higher only about 5% of the time. This is a significant result and we can conclude that the change had an effect on the process and that the mean after the change (sample 2) is higher than the mean before the change (sample 1). The truth is the above data was sample from a process where the mean has only shifted by 1 units and the data is skewed so the median is a better measure of central tendency. The sample size is small so we have to be careful with our conclusions, but the results do show the strength of the bootstrap sampler.
 
 ## Bootstrap Sampling Tool
 
