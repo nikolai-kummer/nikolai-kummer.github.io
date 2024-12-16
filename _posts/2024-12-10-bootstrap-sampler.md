@@ -45,7 +45,7 @@ header:
   }
 </style>
 
-What if you have a process where a change occured and you want to know if any change occured? Being a good data scientist you collected a baseline measurement, pushed the change in production and monitored the process for a while. This is the data you collect and now you need to know if the change had any effect.
+What if you modified a process and you need to know whether a change occured? Being a good data scientist you collected a baseline measurement, pushed the change in production, and monitored the process for a while. This is the data you collect and now you need to know if the modification had any effect.
 
 <img src="/images/02/process_plot.png" alt="Process Measurements" style="display: block; margin: 0 auto;">
 
