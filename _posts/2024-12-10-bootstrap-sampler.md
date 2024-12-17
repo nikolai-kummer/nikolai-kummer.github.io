@@ -57,12 +57,12 @@ The bootstrap sampler is a resampling technique that allows the estimation of an
 
 When you have a sample of data and calculate the mean for it, you are calculating a single number with no way of knowing how variable that number is. 
 
-- In bootstrap sampling you start with your original data of 40 numbers and put them into a hat
+- In bootstrap sampling you start with your original data of (for example) 40 numbers and put them into a hat
 - You draw out 40 numbers __with replacement__ and calculate the mean
 - Then you repeat this process say 10,000 times and calculate the mean each time
 - You now have a distribution of means that you can use to estimate the variability of the mean and a confidence interval around it.
 
-This sounds like it shouldn't work and that is why it was called the method was called bootstrap resampling because it was like pulling yourself up by your bootstraps implying self-sufficiency. Pulling oneself up by your bootstraps is not physically possible, but the boostrap method has been shown to work and is a powerful tool in the data scientist's toolkit.
+This sounds like it shouldn't work and that is why the method was called bootstrap resampling because it was like pulling yourself up by your bootstraps implying self-sufficiency. Pulling oneself up by your bootstraps is not physically possible, but the boostrap method has been shown to work and is a powerful tool in the data scientist's toolkit.
 
 ### Process Change Example
 
