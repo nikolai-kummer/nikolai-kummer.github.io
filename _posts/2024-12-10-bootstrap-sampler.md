@@ -5,7 +5,7 @@ date:   2024-12-10 14:48:00 -0700
 categories: 
   datascience
 classes: wide
-excerpt: Compare and quantify the difference between two real-world samples using the bootstrap sampler
+excerpt: Widget to compare and quantify the difference between two real-world samples using the bootstrap sampling method
 header:
  og_image: /images/pca_main.jpg
  teaser: /images/pca_main.jpg
@@ -45,24 +45,24 @@ header:
   }
 </style>
 
-What if you modified a process and you need to know whether a change occured? Being a good data scientist you collected a baseline measurement, pushed the change in production, and monitored the process for a while. This is the data you collect and now you need to know if the modification had any effect.
+What if you modified a process and you needed to know whether a change occured? Being a good data scientist you collected a baseline measurement, pushed the change into production, and monitored the process for some time. This is the data you collect and now you need to know if the modification had any effect.
 
 <img src="/images/02/process_plot.png" alt="Process Measurements" style="display: block; margin: 0 auto;">
 
-If you squint, you can see that the process seems to have shifted after the change. But how can you be sure? You might remember statistical tests, but what if the data is not normally distributed? Or if you have a small sample size? You cannot always rely on assumptions from parameteric equations when dealing with real-world data. 
+If you squint, you can sort of see that the process has shifted, but how can you be sure? You might remember statistical tests, but what if the data is not normally distributed? Or if you have a small sample size? You cannot always rely on assumptions from parameteric equations when dealing with real-world data. 
 
-The bootstrap sampler is a resampling technique that allows the estimation of any statistic with confidence bounds without any requirements on the distribution of the data. The only assumption that it makes is that the sample that you have is representative of the population. If the sample is biased or contains a weird outlier, then the results will be biased as well.
+The bootstrap sampler is a resampling technique that allows the estimation of any statistic with confidence bounds without any conditions on the distribution of the data. The only assumption that the technique makes is that the sample that you have is representative of the population. If the sample is biased or contains a weird outlier, then the results will be biased as well.
 
 ### Bootstrap Sampling
 
-When you have a sample of data and calculate the mean for it, you are calculating a single number with no way of knowing how variable that number is. 
+When you have a sample of data and calculate the mean for it, you are calculating a single number with no way of knowing how variable that number is and how confident you should be. 
 
 - In bootstrap sampling you start with your original data of (for example) 40 numbers and put them into a hat
-- You draw out 40 numbers __with replacement__ and calculate the mean
-- Then you repeat this process say 10,000 times and calculate the mean each time
+- You draw 40 numbers __with replacement__ and calculate the mean for the current number set
+- Then you repeat this process say 1,000s of times and calculate the mean each time
 - You now have a distribution of means that you can use to estimate the variability of the mean and a confidence interval around it.
 
-This sounds like it shouldn't work and that is why the method was called bootstrap resampling because it was like pulling yourself up by your bootstraps implying self-sufficiency. Pulling oneself up by your bootstraps is not physically possible, but the boostrap method has been shown to work and is a powerful tool in the data scientist's toolkit.
+This sounds like it shouldn't work and that is why the method was called bootstrap resampling because it seems like pulling yourself up by your bootstraps implying self-sufficiency. Pulling oneself up by your bootstraps is not physically possible, but the boostrap method has been shown to work and is a powerful tool to help you make sense of real-world measurements.
 
 ### Process Change Example
 
