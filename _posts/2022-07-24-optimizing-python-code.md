@@ -75,10 +75,9 @@ Begin with an open project folder that you want to profile. Profiling should be 
 ```json
 {
 	"name": "Python: Current File with Profiling",
-	"type": "python",
+	"type": "debugpy",
 	"request": "launch",
 	"module": "cProfile",
-	"cwd": "${fileDirname}",
 	"args": [
 		"-o", "./code_profile.prof", "${file}"
 	]
